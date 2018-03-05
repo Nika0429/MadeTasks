@@ -12,7 +12,7 @@ namespace Project_Animals
 
         double weightOfMeat;
 
-        public double WeightOfMeat
+        public double WeightOfMeat // In killograms
         {
             get
             {
@@ -27,7 +27,7 @@ namespace Project_Animals
             }
         }
 
-        double weightOfFat;
+        double weightOfFat; // In killograms
 
         public double WeightOfFat
         {
@@ -44,7 +44,7 @@ namespace Project_Animals
             }
         }
 
-        double weightOfBones;
+        double weightOfBones; // In killograms
 
         public double WeightOfBones
         {
@@ -91,7 +91,7 @@ namespace Project_Animals
 
         double areaOfSkin;
 
-        public double AreaOfSkin
+        public double AreaOfSkin // In square meters
         {
             get
             {
@@ -108,7 +108,7 @@ namespace Project_Animals
 
         double weightOfPlumage;
 
-        public double WeightOfPlumage
+        public double WeightOfPlumage // In killograms
         {
             get
             {

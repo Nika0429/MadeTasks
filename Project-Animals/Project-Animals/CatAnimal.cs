@@ -78,6 +78,24 @@ namespace Project_Animals
             }
         }
 
+        double weight;
+
+        double IDomesticAnimal.Weight
+        {
+            get
+            {
+                return weight;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    weight = value;
+                }
+            }
+        }
+
+
         gender gender;
 
         gender IDomesticAnimal.Gender
@@ -198,7 +216,7 @@ namespace Project_Animals
 
         statusoflife statusOfLife;
 
-        statusoflife StatusOfLife
+        statusoflife IDomesticAnimal.StatusOfLife
         {
             get
             {

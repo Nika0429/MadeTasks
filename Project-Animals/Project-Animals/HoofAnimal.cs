@@ -78,6 +78,23 @@ namespace Project_Animals
             }
         }
 
+        double weight;
+
+        double IDomesticAnimal.Weight
+        {
+            get
+            {
+                return weight;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    weight = value;
+                }
+            }
+        }
+
         gender gender;
 
         gender IDomesticAnimal.Gender 
@@ -196,6 +213,20 @@ namespace Project_Animals
             }
         }
 
+        statusoflife statusOfLife;
+
+        statusoflife IDomesticAnimal. StatusOfLife
+        {
+            get
+            {
+                return statusOfLife;
+            }
+            set
+            {
+                statusOfLife = value;
+            }
+        }
+
         // Own properties of abstract class HoofAnimal
 
         typeofdigestion typeOfDigestion;
@@ -231,18 +262,23 @@ namespace Project_Animals
             }
         }
 
-        statusoflife statusOfLife;
+        double areaOfSkinOfAdult;
 
-        statusoflife StatusOfLife
+        double AreaOfSkinOfAdult // In meters
         {
             get
             {
-                return statusOfLife;
+                return areaOfSkinOfAdult;
             }
             set
             {
-                statusOfLife = value;
+                if (value >= 0)
+                {
+                    areaOfSkinOfAdult = value;
+                }
             }
         }
+
+
     }
 }

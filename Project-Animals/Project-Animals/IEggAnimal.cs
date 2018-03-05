@@ -8,13 +8,13 @@ namespace Project_Animals
 {
     interface IEggAnimal : IDomesticAnimal // Interface IEggAnimal, heritor of interface IDomesticAnimal
     {
-        double TimeOfGivingEggs
+        double TimeOfGivingEggs // In months
         {
             get;
             set;
         }
 
-        double PriceForTenEggs
+        double PriceForTenEggs // In hryvnas
         {
             get;
             set;

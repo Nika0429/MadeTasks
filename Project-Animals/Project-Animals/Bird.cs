@@ -78,6 +78,23 @@ namespace Project_Animals
             }
         }
 
+        double weight;
+
+        double IDomesticAnimal.Weight
+        {
+            get
+            {
+                return weight;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    weight = value;
+                }
+            }
+        }    
+
         gender gender;
 
         gender IDomesticAnimal.Gender 
@@ -196,6 +213,20 @@ namespace Project_Animals
             }
         }
 
+        statusoflife statusOfLife;
+
+        statusoflife IDomesticAnimal.StatusOfLife
+        {
+            get
+            {
+                return statusOfLife;
+            }
+            set
+            {
+                statusOfLife = value;
+            }
+        }
+
         // Own properties of abstract class Bird
 
         bool abilityToFly;
@@ -226,22 +257,45 @@ namespace Project_Animals
             }
         }
 
-        statusoflife statusOfLife;
+        double weightOfEgg;
 
-        statusoflife StatusOfLife
+        public double WeightOfEgg
         {
             get
             {
-                return statusOfLife;
+                return weightOfEgg;
             }
             set
             {
-                statusOfLife = value;
+                if (weightOfEgg > 0)
+                {
+                    weightOfEgg = value;
+                }
             }
         }
 
-        // Metods
+        bool applyingEggInRawForm;
 
-        public 
+        public bool ApplyingEggInRawForm
+        {
+            get
+            {
+                return applyingEggInRawForm;
+            }
+            set
+            {          
+                applyingEggInRawForm = value;
+            }
+        }
+
+        // Method LayEgg
+
+        public Egg LayEgg()
+        {
+            Egg e1 = new Egg(WeightOfEgg, ApplyingEggInRawForm);
+
+            return e1;
+        }
+
     }
 }

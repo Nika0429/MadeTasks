@@ -14,7 +14,7 @@ namespace Project_Animals
             set;
         }
 
-        double VolumeOfMilkPerDay
+        double VolumeOfMilkPerDay // In liters
         {
             get;
             set;
@@ -26,25 +26,25 @@ namespace Project_Animals
             set;
         }
 
-        double WeightOfFatPerOneLiterOfMilk
+        double WeightOfFatPerOneLiterOfMilk // In killograms
         {
             get;
             set;
         }
 
-        double DensityOfMilk
+        double DensityOfMilk // In killograms per cubic meter
         {
             get;
             set;
         }
 
-        double TimeOfGivingForemilk
+        double TimeOfGivingForemilk // In months
         {
             get;
             set;
         }
 
-        double PriceForOneLiterOfMilk
+        double PriceForOneLiterOfMilk // In hryvnas
         {
             get;
             set;

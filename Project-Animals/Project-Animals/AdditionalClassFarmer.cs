@@ -52,7 +52,7 @@ namespace Project_Animals
 
         // It's method Slaughter, which should return object of class Carcase and it's properties
 
-        public Carcase Slaughter (IMeatAnimal animal)
+        public Carcase Slaughter (ref IMeatAnimal animal)
         {
             Carcase c1 = new Carcase();
 
@@ -60,12 +60,54 @@ namespace Project_Animals
             c1.WeightOfFat = animal.Weight * animal.ProportionOfLardToAllWeight;
             c1.WeightOfBones = animal.Weight * animal.ProportionOfBonesToAllWeight;
 
-            I
+            if (c1.ExistenceOfSkin == true)
+            {
+                if (animal.Age >= 1.5)
+                {
+                    c1.AreaOfSkin = animal.AreaOfSkinOfAdult;
+                }
+                else if (animal.Age < 1.5 && animal.Age > 0.7)
+                {
+                    c1.AreaOfSkin = animal.AreaOfSkinOfAdult * 0.7;
+                }
+                else if (animal.Age <= 0.7 && animal.Age >= 0.3)
+                {
+                    c1.AreaOfSkin = animal.AreaOfSkinOfAdult * 0.4;
+                }
+                else
+                {
+                    c1.AreaOfSkin = animal.AreaOfSkinOfAdult * 0.2;
+                }
+            }
+            else
+            {
+                c1.AreaOfSkin = 0;
+            }
+
+            if (c1.ExistenceOfPlumage == true)
+            {
+                if(animal.Age > 1)
+                {
+                    c1.WeightOfPlumage = animal.WeightOfPlumageOfAdult; 
+                }
+                else if (animal.Age > 0.3)
+                {
+                    c1.WeightOfPlumage = animal.WeightOfPlumageOfAdult * 0.5;
+                }
+                else
+                {
+                    c1.WeightOfPlumage = 0;
+                }
+            }
+            else
+            {
+                c1.WeightOfPlumage = 0;
+            }
+
+            animal.DateOfDeath = DateTime.Today;
+            animal.StatusOfLife = statusoflife.died;
 
             return c1;
         }
-
-        // It's method for checking and returning list of materials which MaterialAnimal can bring
-
     }
 }

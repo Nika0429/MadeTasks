@@ -10,7 +10,7 @@ namespace Project_Animals
     {
         double weight;
 
-        double Weight
+        double Weight // In killograms
         {
             get
             {
@@ -38,6 +38,14 @@ namespace Project_Animals
             {
                 applyingInRawForm = value;
             }
+        }
+
+        // Constructor
+
+        public Egg(double w, bool a)
+        {
+            Weight = w;
+            ApplyingInRawForm = a;
         }
         
     }

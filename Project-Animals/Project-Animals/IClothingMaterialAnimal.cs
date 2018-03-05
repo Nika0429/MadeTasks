@@ -14,7 +14,25 @@ namespace Project_Animals
             set;
         }
 
-        double PriceForOneKillogramOfMaterial
+        double PriceForOneKillogramOfMaterial // In hryvnas
+        {
+            get;
+            set;
+        }
+       
+        bool ExistenceOfSkin
+        {
+            get;
+            set;
+        }
+
+        bool ExistenceOfWool
+        {
+            get;
+            set;
+        }
+
+        bool ExistenceOfPlumage
         {
             get;
             set;

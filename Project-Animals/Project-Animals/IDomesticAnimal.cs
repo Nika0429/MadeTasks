@@ -8,31 +8,31 @@ namespace Project_Animals
 {
     interface IDomesticAnimal // First parental interface
     {
-        double Age // Property age
+        double Age // Property age in years
         {
             get;
             set;
         }
 
-        double Height
+        double Height // In meters
         {
             get;
             set;
         }
 
-        double Length
+        double Length // In meters
         {
             get;
             set;
         }
 
-        double Width
+        double Width // In meters
         {
             get;
             set;
         }
 
-        double Weight
+        double Weight // In killograms
         {
             get;
             set;
@@ -44,13 +44,13 @@ namespace Project_Animals
             set;
         }        
 
-        double Lifespan 
+        double Lifespan // In years
         {
             get;
             set;
         }
 
-        double TimeOfBearingOrIncubationCubs 
+        double TimeOfBearingOrIncubationCubs // In months
         {
             get;
             set;
