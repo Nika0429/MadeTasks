@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_Animals
 {
-    class Duck : Bird, IMeatAnimal, IEggAnimal, IClothingMaterialAnimal
+    class Cow:HoofAnimal, IMeatAnimal, IMilkAnimal, IClothingMaterialAnimal
     {
         // Implementation of properties from interface IMeatAnimal
 
@@ -143,33 +143,121 @@ namespace Project_Animals
             }
         }
 
-        // Implementation of properties from interface IEggAnimal
+        // Implementation of properties from interface IMilkAnimal
 
-        double timeOfGivingEggs;
+        double partOfYearWhenGivesMilk;
 
-        double IEggAnimal.TimeOfGivingEggs
+        double IMilkAnimal.PartOfYearWhenGivesMilk
         {
             get
             {
-                return timeOfGivingEggs;
+                return partOfYearWhenGivesMilk;
             }
             set
             {
-                timeOfGivingEggs = value;
+                if (value > 0 && value < 1)
+                {
+                    partOfYearWhenGivesMilk = value;
+                }
             }
         }
 
-        double priceForTenEggs;
-
-        double IEggAnimal.PriceForTenEggs
+        double volumeOfMilkPerDay;
+        
+        double IMilkAnimal.VolumeOfMilkPerDay
         {
             get
             {
-                return priceForTenEggs;
+                return volumeOfMilkPerDay;
             }
             set
             {
-                priceForTenEggs = value;
+                if (value >= 0)
+                {
+                    volumeOfMilkPerDay = value;
+                }
+            }
+        }
+
+        bool smellOfMilk;
+
+        bool IMilkAnimal.SmellOfMilk
+        {
+            get
+            {
+                return smellOfMeat;
+            }
+            set
+            {
+                smellOfMeat = value;
+            }
+        }
+
+        double weightOfFatPerOneLiterOfMilk;
+
+        double IMilkAnimal.WeightOfFatPerOneLiterOfMilk
+        {
+            get
+            {
+                return weightOfFatPerOneLiterOfMilk;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    weightOfFatPerOneLiterOfMilk = value;
+                }
+            }
+        }
+
+        double densityOfMilk;
+
+        double IMilkAnimal.DensityOfMilk
+        {
+            get
+            {
+                return densityOfMilk;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    densityOfMilk = value;
+                }
+            }
+        }
+
+        double timeOfGivingForemilk;
+
+        double IMilkAnimal.TimeOfGivingForemilk
+        {
+            get
+            {
+                return timeOfGivingForemilk;
+            }
+            set
+            {
+                if (value >= 0)
+                {
+                    timeOfGivingForemilk = value;
+                }
+            }
+        }
+
+        double priceForOneLiterOfMilk;
+
+        double IMilkAnimal.PriceForOneLiterOfMilk
+        {
+            get
+            {
+                return priceForOneLiterOfMilk;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    priceForOneLiterOfMilk = value;
+                }
             }
         }
 
@@ -246,6 +334,37 @@ namespace Project_Animals
             {
                 existenceOfWool = value;
             }
+        }
+
+        // Constructor
+
+        public Cow()
+        {
+            IDomesticAnimal.Age = 0.0;
+
+            meatDensity = 1700;
+            proportionOfMeatToAllWeight = 0.5;
+            proportionOfLardToAllWeight = 0.2;
+            proportionOfBonesToAllWeight = 0.3;
+            smellOfMeat = false;
+            priceForOneKillogramOfMeat = 200;
+
+            weightOfPlumageOfAdult = 0;
+            areaOfSkinOfAdult = 2;
+
+            partOfYearWhenGivesMilk = 0.8;
+            volumeOfMilkPerDay = 25;
+            smellOfMilk = false;
+            weightOfFatPerOneLiterOfMilk = 0.03;
+            densityOfMilk = 1020;
+            timeOfGivingForemilk = 2;
+            priceForOneLiterOfMilk = 20;
+
+            needOfKillingToGetMaterial = true; // It is not right
+            priceForOneKillogramOfMaterial = 1000;
+            existenceOfSkin = true;
+            existenceOfPlumage = false;
+            existenceOfWool = false;
         }
 
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_Animals
 {
-    class Cow:HoofAnimal, IMeatAnimal, IMilkAnimal, IClothingMaterialAnimal
+    class Sheep : HoofAnimal, IMeatAnimal, IMilkAnimal, IClothingMaterialAnimal
     {
         // Implementation of properties from interface IMeatAnimal
 
@@ -163,7 +163,7 @@ namespace Project_Animals
         }
 
         double volumeOfMilkPerDay;
-        
+
         double IMilkAnimal.VolumeOfMilkPerDay
         {
             get
@@ -334,6 +334,33 @@ namespace Project_Animals
             {
                 existenceOfWool = value;
             }
+        }
+
+        public Sheep()
+        {
+            meatDensity = 1700;
+            proportionOfMeatToAllWeight = 0.5;
+            proportionOfLardToAllWeight = 0.2;
+            proportionOfBonesToAllWeight = 0.3;
+            smellOfMeat = true;
+            priceForOneKillogramOfMeat = 200;
+
+            weightOfPlumageOfAdult = 0;
+            areaOfSkinOfAdult = 0.8;
+
+            partOfYearWhenGivesMilk = 0.8;
+            volumeOfMilkPerDay = 4;
+            smellOfMilk = true;
+            weightOfFatPerOneLiterOfMilk = 0.04;
+            densityOfMilk = 1030;
+            timeOfGivingForemilk = 1;
+            priceForOneLiterOfMilk = 20;
+
+            needOfKillingToGetMaterial = false; // Not too right
+            priceForOneKillogramOfMaterial = 1000;
+            existenceOfSkin = true;
+            existenceOfPlumage = false;
+            existenceOfWool = true;
         }
 
     }

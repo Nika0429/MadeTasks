@@ -172,5 +172,20 @@ namespace Project_Animals
                 priceForTenEggs = value;
             }
         }
+
+        public Hen()
+        {
+
+            meatDensity = 1700;
+            proportionOfMeatToAllWeight = 0.5;
+            proportionOfLardToAllWeight = 0.2;
+            proportionOfBonesToAllWeight = 0.3;
+            smellOfMeat = false;
+            priceForOneKillogramOfMeat = 200;
+
+            weightOfPlumageOfAdult = 0;
+            areaOfSkinOfAdult = 0;
+
+        }
     }
 }

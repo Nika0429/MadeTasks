@@ -142,5 +142,18 @@ namespace Project_Animals
                 }
             }
         }
+
+        public Pig()
+        {
+            meatDensity = 1500;
+            proportionOfMeatToAllWeight = 0.5;
+            proportionOfLardToAllWeight = 0.2;
+            proportionOfBonesToAllWeight = 0.3;
+            smellOfMeat = false;
+            priceForOneKillogramOfMeat = 100;
+
+            weightOfPlumageOfAdult = 0;
+            areaOfSkinOfAdult = 0.8;
+        }
     }
 }

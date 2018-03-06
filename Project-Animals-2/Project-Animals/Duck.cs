@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_Animals
 {
-    class Sheep : HoofAnimal, IMeatAnimal, IMilkAnimal, IClothingMaterialAnimal
+    class Duck : Bird, IMeatAnimal, IEggAnimal, IClothingMaterialAnimal
     {
         // Implementation of properties from interface IMeatAnimal
 
@@ -143,121 +143,33 @@ namespace Project_Animals
             }
         }
 
-        // Implementation of properties from interface IMilkAnimal
+        // Implementation of properties from interface IEggAnimal
 
-        double partOfYearWhenGivesMilk;
+        double timeOfGivingEggs;
 
-        double IMilkAnimal.PartOfYearWhenGivesMilk
+        double IEggAnimal.TimeOfGivingEggs
         {
             get
             {
-                return partOfYearWhenGivesMilk;
+                return timeOfGivingEggs;
             }
             set
             {
-                if (value > 0 && value < 1)
-                {
-                    partOfYearWhenGivesMilk = value;
-                }
+                timeOfGivingEggs = value;
             }
         }
 
-        double volumeOfMilkPerDay;
+        double priceForTenEggs;
 
-        double IMilkAnimal.VolumeOfMilkPerDay
+        double IEggAnimal.PriceForTenEggs
         {
             get
             {
-                return volumeOfMilkPerDay;
+                return priceForTenEggs;
             }
             set
             {
-                if (value >= 0)
-                {
-                    volumeOfMilkPerDay = value;
-                }
-            }
-        }
-
-        bool smellOfMilk;
-
-        bool IMilkAnimal.SmellOfMilk
-        {
-            get
-            {
-                return smellOfMeat;
-            }
-            set
-            {
-                smellOfMeat = value;
-            }
-        }
-
-        double weightOfFatPerOneLiterOfMilk;
-
-        double IMilkAnimal.WeightOfFatPerOneLiterOfMilk
-        {
-            get
-            {
-                return weightOfFatPerOneLiterOfMilk;
-            }
-            set
-            {
-                if (value > 0)
-                {
-                    weightOfFatPerOneLiterOfMilk = value;
-                }
-            }
-        }
-
-        double densityOfMilk;
-
-        double IMilkAnimal.DensityOfMilk
-        {
-            get
-            {
-                return densityOfMilk;
-            }
-            set
-            {
-                if (value > 0)
-                {
-                    densityOfMilk = value;
-                }
-            }
-        }
-
-        double timeOfGivingForemilk;
-
-        double IMilkAnimal.TimeOfGivingForemilk
-        {
-            get
-            {
-                return timeOfGivingForemilk;
-            }
-            set
-            {
-                if (value >= 0)
-                {
-                    timeOfGivingForemilk = value;
-                }
-            }
-        }
-
-        double priceForOneLiterOfMilk;
-
-        double IMilkAnimal.PriceForOneLiterOfMilk
-        {
-            get
-            {
-                return priceForOneLiterOfMilk;
-            }
-            set
-            {
-                if (value > 0)
-                {
-                    priceForOneLiterOfMilk = value;
-                }
+                priceForTenEggs = value;
             }
         }
 
@@ -334,6 +246,27 @@ namespace Project_Animals
             {
                 existenceOfWool = value;
             }
+        }
+
+        public Duck()
+        {
+
+            meatDensity = 1700;
+            proportionOfMeatToAllWeight = 0.5;
+            proportionOfLardToAllWeight = 0.2;
+            proportionOfBonesToAllWeight = 0.3;
+            smellOfMeat = false;
+            priceForOneKillogramOfMeat = 200;
+
+            weightOfPlumageOfAdult = 0;
+            areaOfSkinOfAdult = 0;
+
+            needOfKillingToGetMaterial = true; 
+            priceForOneKillogramOfMaterial = 500;
+            existenceOfSkin = false;
+            existenceOfPlumage = false;
+            existenceOfWool = false;
+
         }
 
     }

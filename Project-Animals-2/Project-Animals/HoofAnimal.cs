@@ -11,7 +11,7 @@ namespace Project_Animals
         // Implementation of properties from interface IDomasticAnimal
 
         double age;
-
+                
         double IDomesticAnimal.Age // Property age
         {
             get

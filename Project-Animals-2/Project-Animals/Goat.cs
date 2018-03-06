@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_Animals
 {
-    class Hourse : HoofAnimal, IMeatAnimal, IClothingMaterialAnimal, IDutyAnimal
+    class Goat : HoofAnimal, IMeatAnimal, IMilkAnimal, IClothingMaterialAnimal
     {
         // Implementation of properties from interface IMeatAnimal
 
@@ -143,6 +143,124 @@ namespace Project_Animals
             }
         }
 
+        // Implementation of properties from interface IMilkAnimal
+
+        double partOfYearWhenGivesMilk;
+
+        double IMilkAnimal.PartOfYearWhenGivesMilk
+        {
+            get
+            {
+                return partOfYearWhenGivesMilk;
+            }
+            set
+            {
+                if (value > 0 && value < 1)
+                {
+                    partOfYearWhenGivesMilk = value;
+                }
+            }
+        }
+
+        double volumeOfMilkPerDay;
+
+        double IMilkAnimal.VolumeOfMilkPerDay
+        {
+            get
+            {
+                return volumeOfMilkPerDay;
+            }
+            set
+            {
+                if (value >= 0)
+                {
+                    volumeOfMilkPerDay = value;
+                }
+            }
+        }
+
+        bool smellOfMilk;
+
+        bool IMilkAnimal.SmellOfMilk
+        {
+            get
+            {
+                return smellOfMeat;
+            }
+            set
+            {
+                smellOfMeat = value;
+            }
+        }
+
+        double weightOfFatPerOneLiterOfMilk;
+
+        double IMilkAnimal.WeightOfFatPerOneLiterOfMilk
+        {
+            get
+            {
+                return weightOfFatPerOneLiterOfMilk;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    weightOfFatPerOneLiterOfMilk = value;
+                }
+            }
+        }
+
+        double densityOfMilk;
+
+        double IMilkAnimal.DensityOfMilk
+        {
+            get
+            {
+                return densityOfMilk;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    densityOfMilk = value;
+                }
+            }
+        }
+
+        double timeOfGivingForemilk;
+
+        double IMilkAnimal.TimeOfGivingForemilk
+        {
+            get
+            {
+                return timeOfGivingForemilk;
+            }
+            set
+            {
+                if (value >= 0)
+                {
+                    timeOfGivingForemilk = value;
+                }
+            }
+        }
+
+        double priceForOneLiterOfMilk;
+
+        double IMilkAnimal.PriceForOneLiterOfMilk
+        {
+            get
+            {
+                return priceForOneLiterOfMilk;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    priceForOneLiterOfMilk = value;
+                }
+            }
+        }
+
         // Implementation of properties from interface IClothingMaterialAnimal
 
         bool needOfKillingToGetMaterial;
@@ -218,20 +336,32 @@ namespace Project_Animals
             }
         }
 
-        // Implementation of properties from interface IDutyAnimal
-
-        string purpose;       
-
-        string IDutyAnimal.Purpose
+        public Goat()
         {
-            get
-            {
-                return purpose;
-            }
-            set
-            {
-                purpose = value;
-            }
+            meatDensity = 1700;
+            proportionOfMeatToAllWeight = 0.5;
+            proportionOfLardToAllWeight = 0.2;
+            proportionOfBonesToAllWeight = 0.3;
+            smellOfMeat = true;
+            priceForOneKillogramOfMeat = 200;
+
+            weightOfPlumageOfAdult = 0;
+            areaOfSkinOfAdult = 0.8;
+
+            partOfYearWhenGivesMilk = 0.8;
+            volumeOfMilkPerDay = 4;
+            smellOfMilk = true;
+            weightOfFatPerOneLiterOfMilk = 0.04;
+            densityOfMilk = 1030;
+            timeOfGivingForemilk = 1;
+            priceForOneLiterOfMilk = 20;
+
+            needOfKillingToGetMaterial = false; // Not too right
+            priceForOneKillogramOfMaterial = 1000;
+            existenceOfSkin = true;
+            existenceOfPlumage = false;
+            existenceOfWool = true;
         }
+
     }
 }
