@@ -340,7 +340,7 @@ namespace Project_Animals
 
         public Cow()
         {
-            IDomesticAnimal.Age = 0.0;
+            IDomesticAnimal.Age = 0.0; // On this string it is swearing
 
             meatDensity = 1700;
             proportionOfMeatToAllWeight = 0.5;
