@@ -1,2 +1,0 @@
-E:\NIKA\Работа\Программирование\Project-Animals\Project-Animals\obj\Debug\Project-Animals.csprojResolveAssemblyReference.cache
-E:\NIKA\Работа\Программирование\Project-Animals\Project-Animals\obj\Debug\Project-Animals.csproj.CoreCompileInputs.cache
