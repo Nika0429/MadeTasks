@@ -24,4 +24,4 @@ INSERT INTO Food (Id, Name, Price, Rate) VALUES (7, 'Egg', 30, 39);
 CREATE TABLE FoodNew (Id integer NOT NULL, Name text NOT NULL, Price integer NOT NULL, Rate integer NULL, PRIMARY KEY (Id));
 INSERT INTO FoodNew (Id, Name, Price, Rate) SELECT Id, Name || '-discounted', Price*0.9, Rate FROM Food;
 ```
-[Ссылка на задачу] (https://github.com/Nika0429/MadeTasks/issues/8)
+[Ссылка на задачу](https://github.com/Nika0429/MadeTasks/issues/8)
