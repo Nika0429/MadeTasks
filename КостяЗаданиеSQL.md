@@ -1,7 +1,3 @@
-![Food](https://user-images.githubusercontent.com/36271602/37728342-b23847c4-2d42-11e8-9269-44960060e8ea.png)
-
-![FoodNew](https://user-images.githubusercontent.com/36271602/37728370-c548d1e4-2d42-11e8-95c2-02d839405f1d.png)
-
 Исходный код:
 ``` SQL
 CREATE TABLE Food (Id integer NOT NULL, Name text NOT NULL, Price integer NOT NULL, Rate integer NULL, PRIMARY KEY (Id));
@@ -24,4 +20,8 @@ INSERT INTO Food (Id, Name, Price, Rate) VALUES (7, 'Egg', 30, 39);
 CREATE TABLE FoodNew (Id integer NOT NULL, Name text NOT NULL, Price integer NOT NULL, Rate integer NULL, PRIMARY KEY (Id));
 INSERT INTO FoodNew (Id, Name, Price, Rate) SELECT Id, Name || '-discounted', Price*0.9, Rate FROM Food;
 ```
+![Food](https://user-images.githubusercontent.com/36271602/37728342-b23847c4-2d42-11e8-9269-44960060e8ea.png)
+
+![FoodNew](https://user-images.githubusercontent.com/36271602/37728370-c548d1e4-2d42-11e8-95c2-02d839405f1d.png)
+
 [Ссылка на задачу](https://github.com/Nika0429/MadeTasks/issues/8)
