@@ -25,10 +25,10 @@ INSERT INTO Food (Id, Name, Price, Rate) SELECT Id*8, Name || '-discounted', Pri
 Код в процессе урока 22.03.2018:
 ``` SQL
 DELETE FROM Food WHERE Id > 7;
-UPDATE Food SET Rate = 0 WHERE Rate IS NULL;
+UPDATE Food SET Rate = 0 WHERE Rate IS null;
 SELECT SUM (Price), MIN (Price), MAX (Price), AVG (Price) FROM Food;
 SELECT COUNT (*) FROM Food;
-UPDATE Food SET Rate = NULL WHERE Rate = 0;
-SELECT SUM (Rate), MIN (Rate), MAX (Rate), AVG (Rate) FROM Food WHERE Rate IS NOT NULL;
+UPDATE Food SET Rate = null WHERE Rate = 0;
+SELECT SUM (Rate), MIN (Rate), MAX (Rate), AVG (Rate) FROM Food WHERE Rate IS NOT null;
 SELECT * FROM Food;
 ```
