@@ -1,4 +1,4 @@
-
+``` SQL
 INSERT INTO Products (CategoryId, Name, Price, Quantity)
 VALUES (1, 'Potato', 7, 200),
        (1, 'Orange', 22, 50),
@@ -25,6 +25,6 @@ WHERE Price = (SELECT MAX (Price) FROM Products));
 
 SELECT Name FROM Categories WHERE ID = (SELECT CategoryId FROM Products 
 WHERE Quantity = (SELECT MAX (Quantity) FROM Products));
-
+```
 
 
