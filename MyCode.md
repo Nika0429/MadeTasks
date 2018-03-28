@@ -27,4 +27,3 @@ SELECT Name FROM Categories WHERE ID = (SELECT CategoryId FROM Products
 WHERE Quantity = (SELECT MAX (Quantity) FROM Products));
 ```
 
-
