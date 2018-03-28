@@ -62,4 +62,4 @@ WHERE Price = (SELECT MAX (Price) FROM Products));
 SELECT Name FROM Categories WHERE ID = (SELECT CategoryId FROM Products 
 WHERE Quantity = (SELECT MAX (Quantity) FROM Products));
 ```
-(https://github.com/Nika0429/MadeTasks/issues/9)[Ссылка на задачу]
+[Ссылка на задачу](https://github.com/Nika0429/MadeTasks/issues/9)
